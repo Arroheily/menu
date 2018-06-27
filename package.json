@@ -15,7 +15,9 @@
     "eject": "react-scripts-ts eject",
     "start": "react-app-rewired start --scripts-version react-scripts-ts",
     "build": "react-app-rewired build --scripts-version react-scripts-ts",
-    "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts"
+    "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts",    
+    "server": "cd server && json-server db.json -w -p 3000",
+    "dev": "roadhog server"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",

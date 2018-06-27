@@ -1,15 +1,15 @@
 
 import MenuNode from './core/MenuNode';
 
-import Find from '../../cds/demo/Find';
+import Add from '../../cds/demo/Add';
+import AddUser from '../../cds/demo/AddUser';
 import TableCrudDemo from '../../cds/demo/TableCrudDemo';
-import Work from '../../cds/demo/Work';
 
 const menuRoot = MenuNode.CreateRoot('首页', '/', '');
 const demo = menuRoot.addSubMenu('Demo', '/demo', 'desktop');
-demo.addLeaf('查找', '/demo/find', 'desktop', Find);
+demo.addLeaf('添加用户', '/demo/adduser', 'desktop', AddUser);
 demo.addLeaf('curd', '/demo/tablecruddemo', 'desktop', TableCrudDemo);
-demo.addLeaf('work', '/demo/work', 'desktop', Work);
+demo.addLeaf('用户添加详情页', '/demo/work', 'desktop', Add);
 // demo.addLeaf('消息', '/demo/message', 'desktop', MessageDemo);
 // demo.addLeaf('主题', '/demo/theme', 'desktop', ThemeDemo);
 // demo.addLeaf('按钮test', '/demo/button', 'desktop', ButtonDemo);
