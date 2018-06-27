@@ -1,0 +1,36 @@
+{
+  "user": [
+    {
+      "id": 10000,
+      "name": "吴寸晖",
+      "age": 25,
+      "gender": "male"
+    },
+    {
+      "id": 10001,
+      "name": "寸晖",
+      "age": 27,
+      "gender": "male"
+    },
+    {
+      "id": 10002,
+      "name": "寸",
+      "age": 30,
+      "gender": "female"
+    }
+  ],
+  "book": [
+    {
+      "id": 10000,
+      "name": "晖book",
+      "price": 9990,
+      "owner_id": 10000
+    },
+    {
+      "id": 10001,
+      "name": "huibook",
+      "price": 1990,
+      "owner_id": 10001
+    }
+  ]
+}
