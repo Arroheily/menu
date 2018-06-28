@@ -3,26 +3,23 @@ import * as React from 'react';
 
 export interface IUserProps{
     name?: string;
-    age?: string;
-    gender?: string;
 }
 
 class AddUser extends React.Component<IUserProps,any> {
     constructor(props:IUserProps) {
         super(props);
         this.state = 
-        {name: '',age:'',gender:''};
+        {name: ''};
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
     
       public handleChange(event:any) {
-          alert(event.target.value)
         this.setState({name: event.target.value});
       }
     
-      public handleSubmit(event:any) {
+      public handleSubmit(event:any) {        
         alert('A name was submitted: ' + this.state.name);
         event.preventDefault();
       }
@@ -32,9 +29,7 @@ class AddUser extends React.Component<IUserProps,any> {
           <form onSubmit={this.handleSubmit}>
             <label>姓名:</label>
             <input type="text" value={this.state.name} onChange={this.handleChange} />
-            {/* <label>年龄:</label>
-            <input type="text" value={this.state.age} onChange={this.handleChange} />
-            <input type="submit" value="Submit" /> */}
+            <input type="submit" value="提交" />
           </form>
         );
       }
