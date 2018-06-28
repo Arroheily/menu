@@ -19,10 +19,31 @@ class AddUser extends React.Component<IUserProps,any> {
         this.setState({name: event.target.value});
       }
     
-      public handleSubmit(event:any) {        
-        alert('A name was submitted: ' + this.state.name);
+      public handleSubmit(event:any) {
+        const params = {name:this.state.name};
         event.preventDefault();
-      }
+        fetch('http://localhost:3000/user',{
+            method: 'post',
+            body: JSON.stringify(
+               params
+            ),
+            headers:{
+                'Content-type': 'application/json'
+            }
+        })
+        .then((res) => res.json())
+        .then((res) => {
+            if(res.id){
+                alert("添加用户成功");
+                this.setState({
+                    name: ''
+                });
+            }else{
+                alert("添加失败")
+            }
+        })
+        .catch((err) => console.log(err));
+            }
     
       public render() {
         return (
