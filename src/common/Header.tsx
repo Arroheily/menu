@@ -1,10 +1,9 @@
 import { Layout } from 'antd';
-
 import * as React from 'react';
 
 const Header = () => {
     return <Layout>
-        CNABS Data Studio
+        Arroheily react 学习进阶
     </Layout>;
 }
 
