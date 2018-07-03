@@ -118,7 +118,7 @@ class AddUser extends React.Component<IUserProps, any> {
     public render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <div>表单的验证以及提交</div>        
+                <h3>表单的验证以及提交</h3>     
                 <label>姓名:</label>
                 <input type="text" value={this.state.name.value} name="name" onChange={this.handleChange} />                                
                  <span>{this.state.name.error}</span>            
